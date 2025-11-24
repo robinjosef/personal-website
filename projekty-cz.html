@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+    />
+    <title>Projekty | Robin J. Šafařík</title>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="o-mne.css" />
+    <link rel="stylesheet" href="max-width.css" />
+    <link rel="stylesheet" href="tlacitka-animace.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="contact-styles.css" />
+     <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+
+    /* Canvas jako pozadí */
+    /* Canvas jako pozadí – ale musí přijímat události */
+    #drawLayer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: auto;     /* bylo none → nutné pro přesné mapování */
+      touch-action: none;       /* zabrání scrollu/gestům nad plátnem */
+      cursor: crosshair;
+    }
+
+
+    /* Obsah stránky */
+    .content {
+      position: relative;
+      z-index: 1;        /* vyšší z-index než canvas */
+      padding: 20px;
+      font-family: sans-serif;
+    }
+  </style>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" 
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--SCRIPT-->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
+  <body class="body" style="user-select: none; cursor:crosshair">
+    <!-- Nav -->
+    <input type="checkbox" id="m" class="no-checkbox" />
+    <label for="m" class="menu">
+      <div class="round-menu-holder">
+        <img class="logo-image-mobile" src="images/logo.png" alt="⍰" />
+        <h1 class="name-phone">Robin Josef Šafařík</h1>
+      </div>
+
+      <div class="hamburger-menu">
+        <img
+          class="menu-text-hamburger"
+          src="images/icons8-menu-50.png"
+          alt="⍰"
+        />
+      </div>
+    </label>
+    <nav class="menu-box">
+      <div class="menu-top-two-parts">
+        <div class="menu-top">
+          <img class="logo-image" src="images/logo.png" alt="⍰" />
+          <h1>Robin Josef Šafařík</h1>
+        </div>
+        <div class="line-separating"></div>
+        <a href="projects-en.html" class="button-en">EN</a>
+        <button class="button-cz">CZ</button>
+      </div>
+
+      <div class="menu-center">
+        <a href="index.html" class="title-and-image">
+          <div class="menu-text">O mně</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+        <div class="title-and-image">
+          <div class="menu-text">Projekty</div>
+          <div class="wrapper">
+            <img
+              class="led-on-indicating"
+              src="images/led-on-trace.png"
+              alt="A minimalistic icon of LED"
+            />
+            <img
+              class="small-flat-led-menu"
+              src="images/led-off-trace.png"
+              alt="A minimalistic icon of LED"
+            />
+          </div>
+          <img
+            class="overlap-led-none"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </div>
+        <a href="contact-cz.html" class="title-and-image">
+          <div class="menu-text">Kontakt</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+
+          
+        </a>
+        <a href="survey-en.html" class="title-and-image">
+          <div class="menu-text">Dotazník (EN)</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+      </div>
+      <div class="menu-bottom">
+        <div class="R-track">
+          <img
+            class="R-track"
+            src="images/r-track-hole.png"
+            alt="A minimalistic representation of a resistor"
+          />
+        </div>
+        <div class="square-holder-pins">
+          <div class="pad-text">+</div>
+          <div class="pad-text">-</div>
+          <div class="pad-menu-minus"></div>
+          <div class="pad-menu-plus"></div>
+        </div>
+        <div class="hole-round"></div>
+      </div>
+    </nav>
+    <main class="main-page">
+      <p class="italic-text-black">
+        Právě pracuji na dokončení této stránky. Zatím si tu můžete kreslit:
+      </p>
+      <p class="italic-text-black" style="opacity:0.75; font-weight: 100;">Pravděpodobnost, že stránku dokončím:<br />Dnes: 2%<br />Do týdne: 6%<br />Do měsíce: 17%<br />Do 1 roku: 71%</p>
+      <canvas id="drawLayer"></canvas>
+
+  <div class="content">
+ 
+  </div>
+
+ <script>
+  const canvas = document.getElementById('drawLayer');
+  const ctx = canvas.getContext('2d');
+
+  // Ostré vykreslení včetně HiDPI
+  function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    const cssW = document.documentElement.clientWidth;
+    const cssH = window.innerHeight; // lépe reaguje na iOS bar změny
+
+    canvas.width = Math.round(cssW * dpr);
+    canvas.height = Math.round(cssH * dpr);
+
+    // CSS velikost (vizuální)
+    canvas.style.width = cssW + 'px';
+    canvas.style.height = cssH + 'px';
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.lineCap = 'round';
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'green';
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  // Získání přesné pozice v canvasu
+  function getPos(e) {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    return { x, y };
+  }
+
+  let drawing = false;
+  let last = { x: 0, y: 0 };
+
+  function pointerDown(e) {
+    e.preventDefault();
+    canvas.setPointerCapture?.(e.pointerId);
+    drawing = true;
+    last = getPos(e);
+    ctx.beginPath();
+    ctx.moveTo(last.x, last.y);
+  }
+
+  function pointerMove(e) {
+    if (!drawing) return;
+    e.preventDefault();
+    const p = getPos(e);
+    ctx.beginPath();
+    ctx.moveTo(last.x, last.y);
+    ctx.lineTo(p.x, p.y);
+    ctx.stroke();
+    last = p;
+  }
+
+  function pointerUp(e) {
+    e.preventDefault();
+    drawing = false;
+    ctx.beginPath();
+    try { canvas.releasePointerCapture?.(e.pointerId); } catch {}
+  }
+
+  // Jednotné události (fungují na myši i dotyku včetně iOS)
+  canvas.addEventListener('pointerdown', pointerDown);
+  canvas.addEventListener('pointermove', pointerMove);
+  canvas.addEventListener('pointerup', pointerUp);
+  canvas.addEventListener('pointerleave', pointerUp);
+  canvas.addEventListener('pointercancel', pointerUp);
+
+  // Volitelně: čištění
+  window.clearCanvas = () => ctx.clearRect(0, 0, canvas.width, canvas.height);
+</script>
+
+  
+  </body>
+</html>

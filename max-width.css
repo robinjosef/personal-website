@@ -1,0 +1,352 @@
+@media (max-width: 600px) {
+  .menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(230, 250, 243, 0);
+    top: 0px;
+    left: 0;
+    z-index: 9999;
+  }
+  .fotogalerie {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .italic-text-black {
+    font-family: Stack Sans Text, Arial;
+    font-weight: 600;
+
+    font-style: italic;
+    font-size: clamp(1vw, 1vw, 4vw);
+    color: rgba(0, 0, 0, 0.781);
+    font-size: 20px;
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .logo-image-mobile {
+    height: 50px;
+    margin-top: 0px;
+    margin-left: 10px;
+    filter: invert(1);
+    z-index: 5;
+  }
+  .no-checkbox {
+    display: none;
+  }
+  .menu-button {
+    cursor: pointer;
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .no-checkbox:checked + .menu + .menu-box {
+    transform: translateY(0%);
+  }
+  .no-checkbox:checked + .menu {
+    z-index: 5000;
+    background-color: transparent;
+
+    height: calc(100vw / 4);
+  }
+  .no-checkbox:checked + label .logo-image-mobile {
+    z-index: 0;
+    background-color: yellow;
+    display: none;
+    height: calc(100vw / 4);
+  }
+  .no-checkbox:checked + label .hamburger-menu {
+    color: white;
+    margin-right: 10vw;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .no-checkbox:checked + label .menu-text-hamburger {
+    filter: invert(1);
+    width: 40px;
+    height: 40px;
+  }
+  .no-checkbox:checked + label .name-phone {
+    display: none;
+  }
+  .no-checkbox:checked + label .round-menu-holder {
+    display: none;
+  }
+  .hamburger-menu {
+    z-index: 5;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem; /* ← změněno */
+    height: 65px;
+    width: 65px;
+
+    background-color: rgba(255, 255, 255, 0.573);
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(198, 230, 188, 0.235);
+
+    align-self: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+  }
+  .menu-text-hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-box {
+    background: linear-gradient(rgb(84, 133, 66), rgb(84, 133, 66));
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100vw - 10px);
+    height: calc(
+      100% - 10px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+    );
+
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(38, 69, 50);
+    box-shadow: 5px 0px 0 rgb(134, 129, 85);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 1110;
+    transition: transform 1s ease-in-out;
+    transform: translateY(calc(-110vh));
+  }
+  .round-menu-holder {
+    display: flex;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.524);
+    height: 65px;
+    width: 65vw;
+    border-radius: calc(70px / 2);
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(198, 230, 188, 0.235);
+  }
+  .main-page {
+    padding-left: 0;
+  }
+
+  .main-text {
+    font-family: Roboto, Arial;
+    font-weight: 370;
+    width: 65vw;
+    margin-left: 20vw;
+    font-size: 3cap;
+    order: 3;
+    align-self: center;
+  }
+  .small-flat-led-menu {
+    height: auto;
+    width: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    transition: ease-in-out 0.15s;
+  }
+
+  .title-and-image:hover .overlap-led {
+    animation: none;
+  }
+
+  .model {
+    width: 90vw;
+    height: 80vw;
+    order: 2;
+  }
+
+  .logo-image {
+    /* max-height: 70px; */
+
+    height: calc(100vw / 6);
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  h1 {
+    font-family: Ubuntu Mono, Helvetica, sans-serif;
+    color: white;
+    font-size: 8vw;
+    margin-top: 6px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    max-width: 70vw;
+  }
+  .name-phone {
+    font-family: Ubuntu Mono, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    /* text-shadow: 2px 2px 3px #ffffffd4; */
+    font-size: 7vw;
+    margin-top: 6px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    max-width: 70vw;
+  }
+  .line-separating {
+    background-color: white;
+    height: 0.5vh;
+    width: calc(100vw - 10px);
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1vh;
+  }
+
+  .overlap-led {
+    display: none;
+  }
+  .overlap-led-none {
+    display: none;
+  }
+
+  .title-and-image:hover .overlap-led {
+    animation: none;
+  }
+
+  .led-on-indicating {
+    position: absolute;
+    height: auto;
+    width: 15vh;
+    margin-left: 0px;
+    margin-top: 20px;
+    transform: translateY(-20px);
+    /* transform: translateX(-1px); */
+    opacity: 1;
+    transition: ease-in-out 0.15s;
+    z-index: 10;
+  }
+  .menu-text {
+    font-family: Ubuntu Mono, Arial, Helvetica, sans-serif;
+    font-size: 10vw;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: white;
+    z-index: 10;
+  }
+  .header {
+    font-weight: 400;
+    font-size: clamp(50px, 1vw, 6vw);
+    color: rgb(0, 0, 0);
+    align-self: center;
+    font-family: Momo trust display;
+    z-index: 2;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 70px;
+    padding-bottom: 0;
+    max-width: 90vw;
+  }
+  .two-grid-flex {
+    display: grid;
+    grid-template-rows: repeat(2);
+    grid-template-columns: none;
+    /* justify-content: center;
+    align-items: center; */
+    order: 2;
+  }
+  .separator {
+    height: 0px;
+    width: auto;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgba(182, 182, 182, 0.705);
+    margin: 20px;
+    order: 4;
+  }
+
+  .button-cz {
+    font-family: Ubuntu Mono, Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 10vw;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .button-en {
+    font-family: Ubuntu Mono, Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 10vw;
+    margin-top: 1vw;
+    margin-left: calc(1vw + 5px);
+    cursor: pointer;
+  }
+  .pad-menu-plus {
+    width: 0;
+    border: none;
+  }
+  .pad-menu-minus {
+    width: 0;
+    border: none;
+  }
+  .R-track {
+    position: fixed;
+    width: 0;
+    bottom: 0;
+    left: 15px;
+    z-index: 12;
+  }
+  .pad-text {
+    font-size: 0;
+  }
+  .hole-round {
+    height: 20px;
+    width: 20px;
+  }
+  .italic-text-gray {
+    font-size: clamp(1vw, 4vw, 4vw);
+  }
+}
+@media (max-height: 800px) and (min-width: 600px) {
+  .pad-menu-plus {
+    width: 0;
+    border: none;
+  }
+  .pad-menu-minus {
+    width: 0;
+    border: none;
+  }
+  .R-track {
+    position: fixed;
+    width: 0;
+    bottom: 0;
+    left: 15px;
+    z-index: 12;
+  }
+  .pad-text {
+    font-size: 0;
+  }
+}
+@media (max-width: 880px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}

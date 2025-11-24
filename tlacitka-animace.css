@@ -1,0 +1,63 @@
+.prekryvka {
+  background-color: rgb(84, 133, 66);
+  /* border-style: solid;
+  border-color: black; */
+
+  position: absolute;
+  width: 71px;
+  height: 500px;
+  left: -13px;
+  opacity: 0;
+
+  z-index: 10;
+}
+
+/*HOVER*/
+.title-and-image:hover .prekryvka {
+  animation: prekryvka-animation 0.5s linear forwards;
+}
+.title-and-image:hover .overlap-led {
+  animation: rozsviceni1 0.25s linear forwards;
+}
+.title-and-image:hover .spoj-maly {
+  opacity: 1;
+}
+.title-and-image:hover .small-flat-led-menu {
+  animation: zhasnuti1 0.25 linear forwards;
+}
+/*ANIMACE*/
+@keyframes zhasnuti1 {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rozsviceni1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes prekryvka-animation {
+  0% {
+    opacity: 1;
+    height: 500px;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 1;
+  }
+}

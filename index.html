@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+    />
+    <title>O mně | Robin J. Šafařík</title>
+
+    <meta
+      property="og:image"
+      content="https://images.pexels.com/photos/50711/board-electronics-computer-data-processing-50711.jpeg?cs=srgb&dl=pexels-pixabay-50711.jpg&fm=jpg"
+    />
+
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="o-mne.css" />
+    <link rel="stylesheet" href="max-width.css" />
+    <link rel="stylesheet" href="tlacitka-animace.css" />
+    <link rel="stylesheet" href="fonts.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--SCRIPT-->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
+  <body class="body">
+    <!-- Nav -->
+    <input type="checkbox" id="m" class="no-checkbox" />
+    <label for="m" class="menu">
+      <div class="round-menu-holder">
+        <img class="logo-image-mobile" src="images/logo.png" alt="⍰" />
+        <h1 class="name-phone">Robin Josef Šafařík</h1>
+      </div>
+
+      <div class="hamburger-menu">
+        <img
+          class="menu-text-hamburger"
+          src="images/icons8-menu-50.png"
+          alt="⍰"
+        />
+      </div>
+    </label>
+    <nav class="menu-box">
+      <div class="menu-top-two-parts">
+        <div class="menu-top">
+          <img class="logo-image" src="images/logo.png" alt="⍰" />
+          <h1>Robin Josef Šafařík</h1>
+        </div>
+        <div class="line-separating"></div>
+        <a href="about-en.html" class="button-en">EN</a>
+        <button class="button-cz">CZ</button>
+      </div>
+
+      <div class="menu-center">
+        <div class="title-and-image">
+          <div class="menu-text">O mně</div>
+          <div class="wrapper">
+            <img
+              class="led-on-indicating"
+              src="images/led-on-trace.png"
+              alt="A minimalistic icon of LED"
+            />
+            <img
+              class="small-flat-led-menu"
+              src="images/led-off-trace.png"
+              alt="A minimalistic icon of LED"
+            />
+          </div>
+
+          <img
+            class="overlap-led-none"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </div>
+        <a href="projekty-cz.html" class="title-and-image">
+          <div class="menu-text">Projekty</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+        <a href="contact-cz.html" class="title-and-image">
+          <div class="menu-text">Kontakt</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+
+        <a href="survey-en.html" class="title-and-image">
+          <div class="menu-text">Dotazník (EN)</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+      </div>
+      <div class="menu-bottom">
+        <div class="R-track">
+          <img
+            class="R-track"
+            src="images/r-track-hole.png"
+            alt="A minimalistic representation of a resistor"
+          />
+        </div>
+        <div class="square-holder-pins">
+          <div class="pad-text">+</div>
+          <div class="pad-text">-</div>
+          <div class="pad-menu-minus"></div>
+          <div class="pad-menu-plus"></div>
+        </div>
+        <div class="hole-round"></div>
+      </div>
+    </nav>
+
+    <main class="main-page">
+      <div class="pixel-info2">
+        <span>Rozměry stránky:</span>
+        <span id="pageSize">-- × -- px</span>
+      </div>
+      <section>
+        <div class="page-info"></div>
+
+        <script>
+          function updateSize() {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            document.getElementById("pageSize").textContent = `${w} × ${h} px`;
+          }
+          window.addEventListener("resize", updateSize);
+          document.addEventListener("DOMContentLoaded", updateSize);
+        </script>
+        <section class="container">
+          <section class="two-grid-flex">
+            <model-viewer
+              class="model"
+              src="images/MANTINEL-3D.glb"
+              camera-controls
+              alt="3D model"
+              shadow-intensity="1"
+              disable-zoom
+              disable-pan
+              camera-orbit="70deg 50deg 3m"
+            >
+              <div slot="poster" class="loading-overlay">
+                <div class="pcb-loader"></div>
+              </div>
+            </model-viewer>
+            <p class="main-text" contenteditable="true" spellcheck="false">
+              Proč to dělat jednoduše, když to jde i složitě.
+            </p>
+          </section>
+          <header class="header">Robin Josef Šafařík</header>
+
+          <div class="separator" id="pixelSeparator" style="margin-top: 50px">
+            <div class="pixel-line" id="pixelLine"></div>
+            <div class="pixel-info">
+              <span class="arrow">↑</span>
+              <span class="label">Počet pixelů od začátku stránky:</span>
+              <span id="pxToLine">0</span>
+              <span class="unit">px</span>
+            </div>
+          </div>
+
+          <script>
+            (function () {
+              const pxEl = document.getElementById("pxToLine");
+              const line = document.getElementById("pixelLine");
+
+              function getAbsoluteTop(el) {
+                const rect = el.getBoundingClientRect();
+                const scrollTop =
+                  window.pageYOffset || document.documentElement.scrollTop || 0;
+                return rect.top + scrollTop;
+              }
+
+              function update() {
+                // Měříme přímo DIV s čárou, ne jeho wrapper
+                const top = getAbsoluteTop(line);
+                pxEl.textContent = Math.round(top);
+              }
+
+              // Inicializace + aktualizace při změnách
+              document.addEventListener("DOMContentLoaded", update);
+              window.addEventListener("scroll", update, { passive: true });
+              window.addEventListener("resize", update);
+            })();
+          </script>
+        </section>
+
+        <section class="omezovac">
+          <h2 class="second-header">
+            Jsem student a nadšenec do technologií a inovací.
+          </h2>
+          <div
+            style="
+              font-family: Stack Sans Text, Roboto, Arial, Helvetica, sans-serif;
+              opacity: 0.5;
+              align-self: center;
+            "
+            id="chance"
+          ></div>
+          <script>
+            // minutes: pole true/false za posledních 7 dní (7*24*60 = 10080 záznamů)
+            // true = dostupné, false = výpadek
+            function computeMinuteChance(minutes) {
+              const total = minutes.length;
+              const down = minutes.filter((m) => !m).length;
+              const pEmpirical = total ? down / total : 0;
+
+              // Doména – jedna minuta v roce
+              const pDomain = 1 / (365 * 24 * 60);
+
+              // Jednoduchý součet malých rizik
+              const pMinute = pEmpirical + pDomain; // ostatní složky můžeš přidat podle logů
+              return (pMinute * 100).toFixed(3) + "%";
+            }
+
+            // Příklad: 99.9% uptime (cca 10 výpadkových minut za týden)
+            const total = 7 * 24 * 60;
+            const minutes = Array(total).fill(true);
+            for (let i = 0; i < 10; i++) minutes[i] = false;
+
+            document.getElementById("chance").textContent =
+              "Šance výpadku v příští minutě: " + computeMinuteChance(minutes);
+          </script>
+          <p
+            class="note-non-editable"
+            contenteditable="false"
+            spellcheck="false"
+          >
+            Baví mě vymýšlet nápady a přivádět je k životu. Rád řeším problémy,
+            o kterých člověk zprvu nemá ani tušení.
+          </p>
+          <p class="note" contenteditable="true" spellcheck="false">
+            Zkuste experimentovat a objevujte, co vše vám moje stránka dovolí.
+          </p>
+
+          <section class="fotogalerie">
+            <img
+              src="images/robot-mantinel.jpg"
+              alt="Another robotic project"
+              class="photo-photogallery"
+            />
+            <img
+              src="images/rameno.webp"
+              alt="Robotic arm project"
+              class="photo-photogallery"
+            />
+
+            <!-- <div class="unnecessary-image">
+              Byl jsem líný fotit další obrázek. Můžete si zde nahrát svůj
+              vlastní.
+            </div> -->
+            <div class="drop-zone" id="dropZone">
+              Nechtělo se mi hledat další obrázky.<br />Můžete sem kliknutím
+              vložit svůj vlastní.
+            </div>
+            <input type="file" id="fileInput" accept="image/*" />
+
+            <script>
+              const dropZone = document.getElementById("dropZone");
+              const fileInput = document.getElementById("fileInput");
+
+              // Kliknutí na div otevře file dialog
+              dropZone.addEventListener("click", () => fileInput.click());
+
+              // Drag & Drop
+              dropZone.addEventListener("dragover", (e) => {
+                e.preventDefault();
+                dropZone.classList.add("dragover");
+              });
+
+              dropZone.addEventListener("dragleave", () => {
+                dropZone.classList.remove("dragover");
+              });
+
+              dropZone.addEventListener("drop", (e) => {
+                e.preventDefault();
+                dropZone.classList.remove("dragover");
+                handleFiles(e.dataTransfer.files);
+              });
+
+              // Upload přes input
+              fileInput.addEventListener("change", () => {
+                handleFiles(fileInput.files);
+              });
+
+              function handleFiles(files) {
+                if (files.length === 0) return;
+                const file = files[0];
+                if (!file.type.startsWith("image/")) {
+                  alert("Prosím vložte obrázek.");
+                  return;
+                }
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                  dropZone.innerHTML = `<img src="${e.target.result}" alt="Nahraný obrázek">`;
+                };
+                reader.readAsDataURL(file);
+              }
+            </script>
+          </section>
+
+          <a
+            class="button"
+            href="projekty-cz.html"
+            style="margin: auto; padding-left: 15px; padding-right: 15px"
+          >
+            <p class="pcb-text-lorem">Projekty</p>
+            <div class="button-wrapper">
+              <img
+                class="button-size-png"
+                src="images/button-3d.png"
+                alt="Button image"
+              />
+              <img
+                class="button-size-pressed-png"
+                src="images/button-3d-pressed.png"
+                alt="Button image"
+              />
+            </div>
+          </a>
+          <p class="note-non-editable">
+            Velmi jsem si oblíbil oblasti elektroniky, 3D tisku a programování.
+            Přestože s těmito oblastmi teprve začínám, rád se v nich vzdělávám a
+            zkouším, čeho všeho jsou schopné.
+          </p>
+          <p class="note-non-editable">
+            Díky technologiím může člověk vyřešit problémy, které by bez nich
+            ani neexistovaly :)
+          </p>
+
+          <h2 class="regular-header">Zaměření</h2>
+          <p class="note-non-editable">
+            Nenazýval bych to zaměřeními, spíše zájmy – přece jen jsem teprve v
+            1. ročníku gymnázia.
+          </p>
+          <strong
+            class="note-non-editable"
+            style="
+              margin-top: 15px;
+              margin-bottom: 10px;
+              display: inline-block;
+              font-weight: 600;
+              align-self: baseline;
+            "
+            >Baví mě:</strong
+          ><br />
+          <p
+            class="note-non-editable"
+            style="margin-top: 0px; align-self: baseline"
+          >
+            • Návrh plošných spojů
+          </p>
+          <p
+            class="note-non-editable"
+            style="margin-top: 0px; align-self: baseline"
+          >
+            • 3D tisk a parametrické modelování
+          </p>
+          <p
+            class="note-non-editable"
+            style="margin-top: 0px; align-self: baseline"
+          >
+            • Programování (C, Python, webové technologie)
+          </p>
+          <p
+            class="note-non-editable"
+            style="margin-top: 0px; align-self: baseline"
+          >
+            • Produktový a grafický design
+          </p>
+          <p
+            class="note-non-editable"
+            style="margin-top: 0px; align-self: baseline"
+          >
+            • • •
+          </p>
+          <section class="fotogalerie">
+            <img
+              src="images/soldering.jpg"
+              alt="Robotic arm project"
+              class="photo-photogallery"
+            />
+            <img
+              src="images/dps.png"
+              alt="Robotic arm project"
+              class="photo-photogallery"
+            />
+            <img
+              src="images/humidifier.png"
+              alt="Robotic arm project"
+              class="photo-photogallery"
+            />
+
+            <img
+              src="images/pcb-finished.jpg"
+              alt="Robotic arm project"
+              class="photo-photogallery"
+            />
+            <img
+              src="images/3d-print.jpeg"
+              alt="Robotic arm project"
+              class="photo-photogallery"
+            />
+            <img
+              src="images/NTK-render.png"
+              alt="Robotic arm project"
+              class="photo-photogallery"
+            />
+          </section>
+          <h2 class="regular-header">
+            Proč jsem se rozhodl vytvořit tento web?
+          </h2>
+          <p class="note-non-editable">
+            Jen tak. Zajímalo mě, jak se tvoří webové stránky, tak jsem se začal
+            učit je programovat. Nakonec jsem to dotáhnul do konce a výsledkem
+            je stránka, kterou si právě prohlížíte.
+          </p>
+
+          <p class="note-non-editable">
+            Pokud byste mě chtěli podpořit, velmi mi pomůže vyplnění dotazníku,
+            který je zatím dostupný jen v angličtině. Děkuji, každá odpověď se
+            počítá.
+          </p>
+          <a
+            class="button"
+            href="survey-en.html"
+            style="
+              margin: auto;
+              padding-left: 15px;
+              padding-right: 15px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <p class="pcb-text-lorem">Dotazník <br />(v angličtině)</p>
+            <div class="button-wrapper">
+              <img
+                class="button-size-png"
+                src="images/button-3d.png"
+                alt="Button image"
+              />
+              <img
+                class="button-size-pressed-png"
+                src="images/button-3d-pressed.png"
+                alt="Button image"
+              />
+            </div>
+          </a>
+
+          <div class="regular-separator"></div>
+          <p class="note-non-editable">
+            V případě jakýchkoli dotazů mě neváhejte
+            <a href="contact-cz.html" class="link">kontaktovat</a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              width="20px"
+              height="20px"
+            >
+              <path
+                d="M 40.960938 4.9804688 A 2.0002 2.0002 0 0 0 40.740234 5 L 28 5 A 2.0002 2.0002 0 1 0 28 5 A 2.0002 2.0002 0 1 0 28 9 L 36.171875 9 L 22.585938 22.585938 A 2.0002 2.0002 0 1 0 25.414062 25.414062 L 39 11.828125 L 39 20 A 2.0002 2.0002 0 1 0 43 20 L 43 7.2460938 A 2.0002 2.0002 0 0 0 40.960938 4.9804688 z M 12.5 8 C 8.3826878 8 5 11.382688 5 15.5 L 5 35.5 C 5 39.617312 8.3826878 43 12.5 43 L 32.5 43 C 36.617312 43 40 39.617312 40 35.5 L 40 26 A 2.0002 2.0002 0 1 0 36 26 L 36 35.5 C 36 37.446688 34.446688 39 32.5 39 L 12.5 39 C 10.553312 39 9 37.446688 9 35.5 L 9 15.5 C 9 13.553312 10.553312 12 12.5 12 L 22 12 A 2.0002 2.0002 0 1 0 22 8 L 12.5 8 z"
+              />
+            </svg>
+          </p>
+          <div class="regular-separator"></div>
+
+          <!-- <input type="checkbox" id="img1" class="img1-check" /> 
+          <div class="wrapper-img">
+            <label for="img1" class="img1-label">
+              <img
+                src="img1.jpg"
+                alt="This is a picture."
+                class="block-photo1"
+              />
+            </label>
+            <div class="under-text">
+              Tento obrázek jste smazali. Pro obnovení klikněte sem.
+            </div>
+          </div> -->
+          <section class="lorem-ipsum-generator-section"></section>
+          <div class="text-and-button">
+            <p class="button-description">
+              Jelikož zde zatím nic dalšího není, můžete kliknutím generovat
+              náhodný obsah:
+            </p>
+
+            <button class="button" id="genBtn">
+              <p class="pcb-text-lorem">Generovat text</p>
+              <div class="button-wrapper">
+                <img
+                  class="button-size-png"
+                  src="images/button-3d.png"
+                  alt="Button image"
+                />
+                <img
+                  class="button-size-pressed-png"
+                  src="images/button-3d-pressed.png"
+                  alt="Button image"
+                />
+              </div>
+            </button>
+          </div>
+          <div class="lorem-ipsum-paragraph" id="output"></div>
+          <script>
+            const sentences = [
+              "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+              "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
+              "Vivamus suscipit tortor eget felis porttitor volutpat.",
+              "Nulla quis lorem ut libero malesuada feugiat.",
+              "Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.",
+              "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
+              "Cras ultricies ligula sed magna dictum porta.",
+              "Donec sollicitudin molestie malesuada.",
+              "Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
+              "Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+              "Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam.",
+            ];
+
+            function randomInt(min, max) {
+              return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function randomSentence() {
+              return sentences[randomInt(0, sentences.length - 1)];
+            }
+
+            function randomParagraph() {
+              const sentencesInParagraph = randomInt(4, 7); // 4–7 vět na odstavec
+              const paragraph = [];
+
+              // Každý odstavec začíná pevně danou větou
+              paragraph.push(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              );
+
+              for (let i = 0; i < sentencesInParagraph; i++) {
+                paragraph.push(randomSentence());
+              }
+              return paragraph.join(" ");
+            }
+
+            function generateRandomLorem(count = 5) {
+              const out = [];
+              for (let i = 0; i < count; i++) {
+                out.push(randomParagraph());
+              }
+              return out;
+            }
+
+            document.getElementById("genBtn").addEventListener("click", () => {
+              const outputDiv = document.getElementById("output");
+              outputDiv.innerHTML = "";
+              const paragraphs = generateRandomLorem(5);
+              paragraphs.forEach((text) => {
+                const p = document.createElement("p");
+                p.textContent = text;
+                outputDiv.appendChild(p);
+              });
+            });
+          </script>
+        </section>
+      </section>
+
+      <div class="codswallop"></div>
+      <div class="separator-bottom"></div>
+      <div class="bottom-text">Robin Josef Šafařík, 2025</div>
+    </main>
+  </body>
+</html>

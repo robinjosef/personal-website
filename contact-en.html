@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+    />
+    <title>Contact | Robin J. Šafařík</title>
+    <link rel="icon" type="image/png" href="images/logo-shadow.png" />
+
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="o-mne.css" />
+    <link rel="stylesheet" href="max-width.css" />
+    <link rel="stylesheet" href="tlacitka-animace.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="contact-styles.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--SCRIPT-->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
+  <body class="body">
+    <!-- Nav -->
+    <input type="checkbox" id="m" class="no-checkbox" />
+    <label for="m" class="menu">
+      <div class="round-menu-holder">
+        <img class="logo-image-mobile" src="images/logo.png" alt="⍰" />
+        <h1 class="name-phone">Robin Josef Šafařík</h1>
+      </div>
+
+      <div class="hamburger-menu">
+        <img
+          class="menu-text-hamburger"
+          src="images/icons8-menu-50.png"
+          alt="⍰"
+        />
+      </div>
+    </label>
+    <nav class="menu-box">
+      <div class="menu-top-two-parts">
+        <div class="menu-top">
+          <img class="logo-image" src="images/logo.png" alt="⍰" />
+          <h1>Robin Josef Šafařík</h1>
+        </div>
+        <div class="line-separating"></div>
+        <a href="contact-cz.html" class="button-en">CZ</a>
+        <button class="button-cz">EN</button>
+      </div>
+
+      <a class="menu-center">
+        <a href="about-en.html" class="title-and-image">
+          <div class="menu-text">About</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+        <a href="projects-en.html" class="title-and-image">
+          <div class="menu-text">Projects</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+        <a href="contact-en.html" class="title-and-image">
+          <div class="menu-text">Contact</div>
+          <div class="wrapper">
+            <img
+              class="led-on-indicating"
+              src="images/led-on-trace.png"
+              alt="A minimalistic icon of LED"
+            />
+            <img
+              class="small-flat-led-menu"
+              src="images/led-off-trace.png"
+              alt="A minimalistic icon of LED"
+            />
+          </div>
+
+          <img
+            class="overlap-led-none"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+        <a href="survey-en.html" class="title-and-image">
+          <div class="menu-text">Survey</div>
+          <img
+            class="small-flat-led-menu"
+            src="images/led-off-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+          <img
+            class="overlap-led"
+            src="images/led-on-trace.png"
+            alt="A minimalistic icon of LED"
+          />
+        </a>
+      </div>
+      <div class="menu-bottom">
+        <div class="R-track">
+          <img
+            class="R-track"
+            src="images/r-track-hole.png"
+            alt="A minimalistic representation of a resistor"
+          />
+        </div>
+        <div class="square-holder-pins">
+          <div class="pad-text">+</div>
+          <div class="pad-text">-</div>
+          <div class="pad-menu-minus"></div>
+          <div class="pad-menu-plus"></div>
+        </div>
+        <div class="hole-round"></div>
+      </div>
+    </nav>
+    <main class="main-page">
+      <section class="all-the-way-to-the-bottom">
+        <section class="main-content">
+          <header class="header-contact">Contact</header>
+          <p class="explanatory-note">
+            If you have any
+            <span class="highlight" contenteditable="true">questions</span>
+            <span class="cursor"></span>, please feel free to contact me:
+          </p>
+
+          <form
+            action="https://formsubmit.co/robinjos.vlcr@gmail.com"
+            method="POST"
+          >
+            <section class="contact-grid">
+              <p class="pcb-text">Contact me:</p>
+              <section class="contact-grid-divider">
+                <input
+                  type="text"
+                  class="contact-input"
+                  placeholder="Name"
+                  name="Name"
+                  required
+                />
+                <input
+                  type="email"
+                  class="contact-input"
+                  placeholder="email"
+                  name="email"
+                  required
+                />
+              </section>
+              <textarea
+                class="textarea-contact"
+                name="message"
+                placeholder="Write your message here."
+                required
+              ></textarea>
+              <section class="contact-grid-divider">
+                <button class="submit-button" type="submit">
+                  <p class="pcb-text">Submit</p>
+                  <div class="wrapper-button">
+                    <img
+                      class="button-3d-style"
+                      src="images/button-3d.png"
+                      alt="⍰"
+                    />
+                    <img
+                      class="button-3d-pressed-style"
+                      src="images/button-3d-pressed.png"
+                      alt="⍰"
+                    />
+                  </div>
+                </button>
+                <div class="hole-round-contact"></div>
+              </section>
+            </section>
+          </form>
+          <div class="separator"></div>
+          <!-- <div class="flex-pcb-decoration"> -->
+          <section class="mail-phone-grid">
+            <div class="icon-text">
+              <img
+                class="email-thumbnail"
+                src="images/Email Symbol.png"
+                alt="⍰"
+              />
+              <a
+                target="_blank"
+                href="mailto:robinjos.vlcr@gmail.com"
+                class="thumbnail-description"
+                >robinjos.vlcr@gmail.com</a
+              >
+            </div>
+            <div class="icon-text">
+              <img
+                class="email-thumbnail"
+                src="images/pngimg.com - phone_PNG48972.png"
+                alt="⍰"
+              />
+              <a href="tel:775199954" class="thumbnail-description"
+                >775 199 954</a
+              >
+            </div>
+            <a
+              href="https://www.printables.com/@RobinJosef_2070377"
+              class="icon-text"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="email-thumbnail"
+                src="images/idSwsPEP0O_logos.jpeg"
+                alt="⍰"
+              />
+              <div class="open-window-section">
+                <p class="thumbnail-description">
+                  Robin Josef
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 48 48"
+                    width="20px"
+                    height="20px"
+                  >
+                    <path
+                      d="M 40.960938 4.9804688 A 2.0002 2.0002 0 0 0 40.740234 5 L 28 5 A 2.0002 2.0002 0 1 0 28 5 A 2.0002 2.0002 0 1 0 28 9 L 36.171875 9 L 22.585938 22.585938 A 2.0002 2.0002 0 1 0 25.414062 25.414062 L 39 11.828125 L 39 20 A 2.0002 2.0002 0 1 0 43 20 L 43 7.2460938 A 2.0002 2.0002 0 0 0 40.960938 4.9804688 z M 12.5 8 C 8.3826878 8 5 11.382688 5 15.5 L 5 35.5 C 5 39.617312 8.3826878 43 12.5 43 L 32.5 43 C 36.617312 43 40 39.617312 40 35.5 L 40 26 A 2.0002 2.0002 0 1 0 36 26 L 36 35.5 C 36 37.446688 34.446688 39 32.5 39 L 12.5 39 C 10.553312 39 9 37.446688 9 35.5 L 9 15.5 C 9 13.553312 10.553312 12 12.5 12 L 22 12 A 2.0002 2.0002 0 1 0 22 8 L 12.5 8 z"
+                    />
+                  </svg>
+                </p>
+              </div>
+            </a>
+          </section>
+          <!-- <img
+              src="pcb.png"
+              alt="A printed circuit board representation."
+              class="img-pcb"
+            /> -->
+          <!-- </div> -->
+        </section>
+      </section>
+      <div class="codswallop"></div>
+      <div class="separator-bottom"></div>
+      <div class="bottom-text">Robin Josef Šafařík, 2025</div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,392 @@
+.main {
+  height: 100dvh;
+}
+.body {
+  min-height: 100dvh;
+}
+.regular-header {
+  font-family: Stack Sans Text, Arial;
+  font-size: 4vw;
+  color: rgb(16, 16, 16);
+}
+.header-grid {
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-items: center;
+}
+.explanatory-note {
+  font-family: Stack Sans Text, Arial;
+  color: rgb(44, 44, 44);
+  font-weight: 550;
+  font-size: x-large;
+  margin: auto;
+}
+.highlight {
+  color: #005230; /* jiná barva textu */
+  border: 2px solid #005230; /* rámeček kolem textu */
+  border-radius: 4px;
+  padding: 2px 6px;
+  background-color: rgba(0, 204, 116, 0.1);
+  display: inline-block;
+  max-width: 60vw;
+  height: auto;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: black;
+  margin-left: 2px;
+  font-size: xx-large;
+  animation: blink 1s step-start infinite;
+  vertical-align: text-bottom;
+}
+.contact-grid {
+  display: grid;
+  grid-template-rows: repeat(4);
+  max-width: 800px;
+  width: 60vw;
+  margin: 0 auto;
+  margin-top: 50px;
+  background: linear-gradient(rgb(84, 133, 66), rgb(84, 133, 66));
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(38, 69, 50);
+  box-shadow: 5px 5px 0 rgb(134, 129, 85);
+  border-radius: 20px;
+  padding: 5px;
+  height: auto;
+}
+.contact-grid-divider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: end;
+}
+.contact-input {
+  background-color: transparent;
+  height: 30px;
+  border: solid;
+  border: none;
+  border-radius: 0px;
+  max-width: 50vw;
+  margin: 3px;
+  font-family: Ubuntu Mono, Stack Sans Text, Arial;
+  font-size: x-large;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 5px;
+  border-bottom: solid white 3px;
+}
+.contact-input:focus {
+  outline: none;
+}
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.564);
+}
+.contact-input:hover {
+  border-bottom: dotted;
+}
+.textarea-contact {
+  resize: vertical;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-family: Ubuntu Mono, Stack Sans Text, Arial;
+  font-size: x-large;
+  font-weight: 700;
+  margin: 3px;
+  margin-top: 7px;
+  padding: 5px;
+  padding-left: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+  height: 100px;
+}
+.textarea-contact:focus {
+  outline: none;
+}
+.textarea-contact::placeholder {
+  color: rgba(255, 255, 255, 0.564);
+}
+.textarea-contact:hover {
+  border-style: dotted;
+}
+.submit-button {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-family: Ubuntu Mono, Stack Sans Text, Arial;
+  font-size: x-large;
+  font-weight: 700;
+  margin: 3px;
+  height: fit-content;
+  border-style: dashed;
+  border-width: 3px;
+  border-radius: 15px;
+  border-color: white;
+  padding: 5px;
+  max-width: 210px;
+}
+.pcb-text {
+  color: rgb(255, 255, 255);
+  font-family: Ubuntu Mono, Stack Sans Text, Arial;
+  font-size: xx-large;
+  font-weight: 800;
+  margin-left: 1vw;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  transition: linear 0.5s;
+}
+.button-3d-style {
+  width: 50px;
+  height: auto;
+  margin-left: 1vw;
+  position: absolute;
+  object-fit: cover;
+}
+.button-3d-pressed-style {
+  width: 50px;
+  height: auto;
+  margin-left: 1vw;
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+}
+.wrapper-button {
+  position: relative;
+  width: fit-content;
+}
+.submit-button:hover .button-3d-pressed-style {
+  opacity: 1;
+}
+.submit-button:hover .pcb-text {
+  text-shadow: 0 0 20px rgb(255, 191, 0);
+}
+.hole-round-contact {
+  /* background-color: rgb(216, 230, 218); */
+  background-color: rgb(233, 233, 233);
+  height: 15px;
+  width: 15px;
+  justify-self: end;
+  align-self: self-end;
+  border-radius: 50%;
+  box-shadow: inset 5px 0 0 rgb(129, 125, 83);
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(38, 69, 50);
+}
+.mail-phone-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-content: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0px;
+}
+.icon-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(255, 255, 255, 0.571);
+  border-radius: 25px; */
+  /* border-style: solid;
+  border-color: rgba(148, 148, 148, 0.24);
+  border-width: 3px; */
+  width: min-content;
+  height: 50px;
+  padding-right: 5px;
+  text-decoration: none !important;
+  -webkit-text-decoration: none;
+}
+.icon-text:hover .thumbnail-description {
+  text-shadow: 0px 0px 2px rgb(255, 255, 255);
+  color: rgb(0, 130, 106);
+}
+.email-thumbnail {
+  width: 25px;
+  height: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+  /* border-style: solid; */
+
+  /* border-width: 2px;
+  border-color: rgba(119, 119, 119, 0.181); */
+}
+.thumbnail-description,
+.thumbnail-description:visited,
+.thumbnail-description:active {
+  color: black;
+  font-family: Stack Sans Text, Ubuntu Mono, Stack Sans Text, Arial;
+  font-size: 25px;
+  font-weight: 550;
+  margin-left: 5px;
+  width: max-content;
+  transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
+  text-decoration: none !important;
+  -webkit-text-decoration: none;
+}
+a[href^="tel:"] {
+  color: inherit; /* převezme barvu rodiče */
+  text-decoration: none; /* zruší podtržení */
+  font-style: normal; /* jistota, že nebude kurzíva na iOS */
+}
+@media (max-width: 1250px) {
+  .mail-phone-grid {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3);
+  }
+}
+@media (max-width: 600px) {
+  .contact-grid {
+    width: 90vw;
+  }
+  .textarea-contact {
+    margin: 3px;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    padding-left: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    height: 100px;
+    max-width: none;
+    width: calc(90vw - 40px - 10px);
+  }
+  .contact-grid-divider {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    align-content: end;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-input {
+    background-color: transparent;
+    height: 30px;
+    border: solid;
+    border: none;
+    border-radius: 0px;
+    max-width: none;
+    width: calc(90vw - 40px);
+    margin: 3px;
+    font-family: Ubuntu Mono, Stack Sans Text, Arial;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    padding: 5px;
+    border-bottom: solid white 3px;
+  }
+  .submit-button {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-family: Ubuntu Mono, Stack Sans Text, Arial;
+    font-size: x-large;
+    font-weight: 700;
+    margin: 3px;
+    margin-left: calc(5vw - 5px);
+    border-style: dashed;
+    border-width: 3px;
+    border-radius: 15px;
+    border-color: white;
+    height: min-content;
+    max-width: none;
+    width: min-content;
+  }
+  .pcb-text {
+    margin-right: 10px;
+  }
+  .explanatory-note {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .mail-phone-grid {
+    margin-top: 10px;
+  }
+  .header-contact {
+    font-weight: 900;
+    font-size: clamp(50px, 7vw, 2000px);
+    color: rgb(0, 0, 0);
+    align-self: center;
+    font-family: Momo trust display;
+    z-index: 2;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 90vw;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    /* text-shadow: 0px 0px 10px rgb(15, 13, 82); */
+  }
+}
+.newWindow {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==)
+    no-repeat center;
+  width: 1em;
+  height: 1em;
+}
+.open-window-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+.new-tab {
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+}
+.header-contact {
+  font-weight: 900;
+  font-size: clamp(50px, 7vw, 2000px);
+  color: rgb(0, 0, 0);
+  align-self: center;
+  font-family: Momo trust display;
+  z-index: 2;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: 90vw;
+  /* text-shadow: 0px 0px 10px rgb(15, 13, 82); */
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.all-the-way-to-the-bottom {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.flex-pcb-decoration {
+  display: flex;
+  flex-direction: row;
+}
+.img-pcb {
+  height: 10vw;
+}
+@media (max-width: 1220px) {
+  .img-pcb {
+    display: none;
+  }
+}

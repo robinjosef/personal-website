@@ -1,7 +1,7 @@
 .body {
   display: flex;
   justify-content: center;
-
+  min-height: 100vh;
   /* height: 3000px; */
   background-color: rgb(216, 230, 218);
   background: linear-gradient(
@@ -21,6 +21,7 @@
     rgb(226, 251, 255) 50%,
     rgb(224, 225, 255) 75%
   );
+
   font-family: Stack Sans Text, Arial, Helvetica, sans-serif;
 }
 .menu-box {
@@ -281,6 +282,7 @@ h1 {
   display: flex;
   flex-direction: column;
   padding-left: 250px;
+  min-width: 50vw;
 }
 
 .header {
@@ -288,6 +290,7 @@ h1 {
   font-size: clamp(50px, 7vw, 2000px);
   color: rgb(0, 0, 0);
   align-self: center;
+  justify-self: center;
   font-family: Momo trust display;
   z-index: 2;
   padding-left: 50px;
@@ -299,6 +302,13 @@ h1 {
   /* text-shadow: 0px 0px 10px rgb(15, 13, 82); */
 }
 .container {
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 50vw;
+}
+.container-survey {
   display: grid;
   grid-template-rows: auto;
   align-items: center;
@@ -329,6 +339,107 @@ h1 {
   font-weight: 500;
   font-size: larger;
   /* text-shadow: 0px 0px 10px rgb(15, 13, 82); */
+}
+/* h2 */
+.h2-universal {
+  font-family: Stack Sans Text, Arial;
+  color: rgb(73, 73, 73);
+  font-weight: 550;
+  font-size: xx-large;
+  margin: auto;
+  margin-top: 20px;
+  align-self: center;
+  justify-self: center;
+}
+.h2-explanatory {
+  font-family: Stack Sans Text, Arial;
+  color: rgb(44, 44, 44);
+  font-weight: 550;
+  font-size: x-large;
+  margin: auto;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+/* h2 */
+
+/* h3 */
+.h3-universal {
+  font-family: Stack Sans Text, Arial;
+  color: rgb(46, 46, 46);
+  font-weight: 550;
+  font-size: x-large;
+  margin: auto;
+  margin-top: 30px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+/* h3 */
+a {
+  text-decoration: none;
+}
+.light-button-description {
+  border: solid rgba(0, 91, 194, 0.493);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  max-width: 80vw;
+  width: 50vw;
+
+  height: fit-content;
+  text-decoration: none;
+}
+.light-button-paragraph {
+  font-family: Stack Sans Text, Arial;
+  color: rgba(0, 90, 194, 0.801);
+  font-weight: 550;
+  font-size: x-large;
+  margin: auto;
+  align-self: baseline;
+  justify-self: center;
+  text-align: center;
+  text-decoration: none !important;
+}
+.light-button-description:hover .light-button-paragraph {
+  color: rgb(0, 196, 65);
+}
+.light-button-description:hover {
+  border-color: rgb(0, 196, 65);
+}
+.new-content {
+  position: absolute;
+  background-color: #edfeff;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  transform: translateY(-30px);
+  font-family: Stack Sans Text, Arial;
+  color: rgb(82, 163, 255);
+  font-weight: 550;
+  font-size: x-large;
+  margin: auto;
+  align-self: baseline;
+  justify-self: baseline;
+  text-align: center;
+  text-decoration: none !important;
+}
+.all-surveys {
+  font-family: Stack Sans Text, Arial;
+  color: rgba(0, 87, 39, 0.801);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: large;
+  margin: auto;
+  align-self: baseline;
+  justify-self: baseline;
+  width: 100%;
+  left: 0;
+  text-decoration: none !important;
+}
+.all-surveys:hover {
+  opacity: 0.5;
 }
 .separator {
   height: 0px;
@@ -392,6 +503,8 @@ h1 {
   font-style: italic;
   font-size: clamp(1vw, 1vw, 4vw);
   color: rgb(158, 158, 158);
+  align-self: center;
+  justify-self: center;
 }
 .italic-text-black {
   font-family: Stack Sans Text, Arial;
@@ -647,7 +760,7 @@ h1 {
 .note-non-editable {
   font-family: Stack Sans Text, Arial, Helvetica, sans-serif;
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: rgba(0, 0, 0, 0.72);
 }
 .regular-header {
@@ -683,6 +796,9 @@ h1 {
   aspect-ratio: 4 / 3;
 }
 @media (max-width: 768px) {
+  .light-button-description {
+    width: auto;
+  }
   .pixel-info2 {
     position: absolute; /* drží se na okraji okna */
     top: 50%; /* přibližně uprostřed výšky */
@@ -885,6 +1001,14 @@ button {
   margin-left: auto;
 }
 .pixel-info2 {
+  font-family: Stack Sans Text, Roboto, Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.404);
+  font-size: medium;
+  margin-left: auto;
+  position: absolute;
+  right: 20px;
+}
+.pixel-info3 {
   font-family: Stack Sans Text, Roboto, Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.404);
   font-size: medium;

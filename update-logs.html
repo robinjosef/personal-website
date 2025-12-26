@@ -33,6 +33,11 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
     <!--SCRIPT-->
     <script
       type="module"
@@ -150,79 +155,15 @@
     </nav>
 
     <main class="main-page">
-      <section class="container">
-        <!-- <img class="photo" src="images/Concours-Photo-CU..jpg" alt="Profile photo" /> -->
-
-        <header class="header"></header>
-        <p class="italic-text-gray" style="min-width: 50vw">
-          Sorry, this page is avilable only in English at the moment.
-        </p>
-        <a href="survey-en.html" class="all-surveys">&lt All surveys</a>
-        <div class="separator"></div>
-        <iframe
-          data-tally-src="https://tally.so/embed/q4ZjK7?alignLeft=1&transparentBackground=1&dynamicHeight=1"
-          loading="lazy"
-          width="100%"
-          height="1121"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          title="Exploring everyday struggles"
-        ></iframe>
-        <script>
-          var d = document,
-            w = "https://tally.so/widgets/embed.js",
-            v = function () {
-              "undefined" != typeof Tally
-                ? Tally.loadEmbeds()
-                : d
-                    .querySelectorAll("iframe[data-tally-src]:not([src])")
-                    .forEach(function (e) {
-                      e.src = e.dataset.tallySrc;
-                    });
-            };
-          if ("undefined" != typeof Tally) v();
-          else if (d.querySelector('script[src="' + w + '"]') == null) {
-            var s = d.createElement("script");
-            (s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s);
-          }
-        </script>
-
-        <div class="separator"></div>
-        <p
-          class="pixel-info3"
-          style="
-            position: relative;
-            align-items: center;
-            justify-content: center;
-          "
-        >
-          Probability of completing the survey:
-          <strong id="probability">-- %</strong>
-        </p>
-        <script>
-          function randomProbability() {
-            // generuje číslo mezi 20 a 95
-            return Math.floor(Math.random() * (95 - 60 + 1)) + 60;
-          }
-
-          function updateProbability() {
-            document.getElementById("probability").textContent =
-              randomProbability() + " %";
-          }
-
-          // inicializace
-          updateProbability();
-
-          // občasná změna (např. každých 5 sekund)
-          setInterval(updateProbability, 5000);
-        </script>
-      </section>
+      <h1 class="header">Update logs</h1>
+      <p class="h3-universal" style="text-align: left">
+        <em style="opacity: 0.6; margin-right: 15px">Nov 24, 2025</em>Published
+        the website. <br />
+        <em style="opacity: 0.6; margin-right: 15px">Dec 26, 2025</em>Added
+        'Surveys' section, enabling multiple surveys, added 'Update logs' page.
+        <br />
+      </p>
       <div class="codswallop"></div>
-      <div class="separator-bottom"></div>
-      <div class="bottom-text">
-        © 2025 Robin Josef Šafařík, all rights reserved.
-      </div>
     </main>
   </body>
 </html>

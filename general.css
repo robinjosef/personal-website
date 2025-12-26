@@ -427,7 +427,6 @@ a {
 .all-surveys {
   font-family: Stack Sans Text, Arial;
   color: rgba(0, 87, 39, 0.801);
-  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   font-weight: 600;
   font-size: large;
@@ -442,6 +441,18 @@ a {
   opacity: 0.5;
 }
 .separator {
+  height: 0px;
+  width: auto;
+  border-style: solid;
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: rgba(182, 182, 182, 0.705);
+  margin: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+.separator-surveys {
   height: 0px;
   width: auto;
   border-style: solid;

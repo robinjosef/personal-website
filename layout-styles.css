@@ -1,0 +1,72 @@
+/* Horizontal flex (row) */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Vertical flex (column) */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center content both axes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Space between children */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Align items to start/end/center (cross-axis) */
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-align-end {
+  align-items: flex-end;
+}
+
+/* Justify content on main axis */
+.flex-justify-start {
+  justify-content: flex-start;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-end {
+  justify-content: flex-end;
+}
+
+/* Flex wrap */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.flex-col-projects {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: aqua;
+  background: linear-gradient(90deg, rgb(105, 105, 105), white);
+}

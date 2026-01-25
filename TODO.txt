@@ -1,0 +1,4 @@
+z 01.01.2025
+Dodělat projekty
+    opravit problém s max-width:60vw na mobilu 
+    upravit rozložení grid

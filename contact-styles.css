@@ -5,7 +5,9 @@
   min-height: 100dvh;
 }
 .regular-header {
-  font-family: Stack Sans Text, Arial;
+  font-family:
+    Stack Sans Text,
+    Arial;
   font-size: 4vw;
   color: rgb(16, 16, 16);
 }
@@ -67,7 +69,10 @@
   border-radius: 0px;
   max-width: 50vw;
   margin: 3px;
-  font-family: Ubuntu Mono, Stack Sans Text, Arial;
+  font-family:
+    Ubuntu Mono,
+    Stack Sans Text,
+    Arial;
   font-size: x-large;
   color: rgb(255, 255, 255);
   font-weight: 700;
@@ -89,7 +94,10 @@
   border-radius: 15px;
   background-color: transparent;
   color: rgb(255, 255, 255);
-  font-family: Ubuntu Mono, Stack Sans Text, Arial;
+  font-family:
+    Ubuntu Mono,
+    Stack Sans Text,
+    Arial;
   font-size: x-large;
   font-weight: 700;
   margin: 3px;
@@ -115,7 +123,10 @@
   grid-template-columns: repeat(3, 2fr);
   background-color: transparent;
   color: rgb(255, 255, 255);
-  font-family: Ubuntu Mono, Stack Sans Text, Arial;
+  font-family:
+    Ubuntu Mono,
+    Stack Sans Text,
+    Arial;
   font-size: x-large;
   font-weight: 700;
   margin: 3px;
@@ -129,7 +140,10 @@
 }
 .pcb-text {
   color: rgb(255, 255, 255);
-  font-family: Ubuntu Mono, Stack Sans Text, Arial;
+  font-family:
+    Ubuntu Mono,
+    Stack Sans Text,
+    Arial;
   font-size: xx-large;
   font-weight: 800;
   margin-left: 1vw;
@@ -219,12 +233,18 @@
 .thumbnail-description:visited,
 .thumbnail-description:active {
   color: black;
-  font-family: Stack Sans Text, Ubuntu Mono, Stack Sans Text, Arial;
+  font-family:
+    Stack Sans Text,
+    Ubuntu Mono,
+    Stack Sans Text,
+    Arial;
   font-size: 25px;
   font-weight: 550;
   margin-left: 5px;
   width: max-content;
-  transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
+  transition:
+    color 0.25s ease-in-out,
+    text-shadow 0.25s ease-in-out;
   text-decoration: none !important;
   -webkit-text-decoration: none;
 }
@@ -274,7 +294,10 @@ a[href^="tel:"] {
     max-width: none;
     width: calc(90vw - 40px);
     margin: 3px;
-    font-family: Ubuntu Mono, Stack Sans Text, Arial;
+    font-family:
+      Ubuntu Mono,
+      Stack Sans Text,
+      Arial;
     font-size: x-large;
     color: rgb(255, 255, 255);
     font-weight: 700;
@@ -286,7 +309,10 @@ a[href^="tel:"] {
     grid-template-columns: repeat(3, 2fr);
     background-color: transparent;
     color: rgb(255, 255, 255);
-    font-family: Ubuntu Mono, Stack Sans Text, Arial;
+    font-family:
+      Ubuntu Mono,
+      Stack Sans Text,
+      Arial;
     font-size: x-large;
     font-weight: 700;
     margin: 3px;
@@ -383,4 +409,10 @@ a[href^="tel:"] {
   .img-pcb {
     display: none;
   }
+}
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

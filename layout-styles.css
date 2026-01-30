@@ -70,3 +70,10 @@
   border-color: aqua;
   background: linear-gradient(90deg, rgb(105, 105, 105), white);
 }
+.grid-abilities {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 15px;
+  margin-top: 10px;
+  width: 100%;
+}

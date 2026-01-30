@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
@@ -247,7 +247,12 @@
           </h2>
           <div
             style="
-              font-family: Stack Sans Text, Roboto, Arial, Helvetica, sans-serif;
+              font-family:
+                Stack Sans Text,
+                Roboto,
+                Arial,
+                Helvetica,
+                sans-serif;
               opacity: 0.5;
               align-self: center;
             "
@@ -387,52 +392,48 @@
             exist without it.”
           </p>
 
-          <h2 class="regular-header">Specializations</h2>
-          <p class="note-non-editable">
-            I’d describe them more as interests than specializations, since I’m
-            just in my first year of high school.
-          </p>
-          <strong
-            class="note-non-editable"
-            style="
-              margin-top: 15px;
-              margin-bottom: 10px;
-              display: inline-block;
-              font-weight: 600;
-              align-self: baseline;
-            "
-            >I enjoy:</strong
-          ><br />
-          <p
-            class="note-non-editable"
-            style="margin-top: 0px; align-self: baseline"
-          >
-            • PCB design
-          </p>
-          <p
-            class="note-non-editable"
-            style="margin-top: 0px; align-self: baseline"
-          >
-            • 3D printing and parametric modeling
-          </p>
-          <p
-            class="note-non-editable"
-            style="margin-top: 0px; align-self: baseline"
-          >
-            • Programming (C, Python, web technologies)
-          </p>
-          <p
-            class="note-non-editable"
-            style="margin-top: 0px; align-self: baseline"
-          >
-            • Product and graphic design
-          </p>
-          <p
-            class="note-non-editable"
-            style="margin-top: 0px; align-self: baseline"
-          >
-            • • •
-          </p>
+          <h2 style="margin-bottom: 0px" class="second-header">Interests</h2>
+          <h3 style="margin-bottom: 20px" class="regular-header">I enjoy:</h3>
+          <!-- <grid class="grid-abilities"> -->
+          <div class="ability-box">
+            <img
+              class="ability-picture"
+              src="images/soldering.jpg"
+              alt="PCB icon"
+            />
+            <div class="overlap-ability"></div>
+            <div class="ability-description-header">Robotics</div>
+            <div class="ability-description-text">Hardware and software</div>
+          </div>
+          <div class="ability-box">
+            <img
+              class="ability-picture"
+              src="images/programovani.png"
+              alt="PCB icon"
+            />
+            <div class="overlap-ability"></div>
+            <div class="ability-description-header">Programming</div>
+            <div class="ability-description-text">
+              C, C++, Python, HTML, CSS, Java
+            </div>
+          </div>
+          <div class="ability-box">
+            <img class="ability-picture" src="images/dps.png" alt="PCB icon" />
+            <div class="overlap-ability"></div>
+            <div class="ability-description-header">PCB Design</div>
+            <div class="ability-description-text">Schematic and layout</div>
+          </div>
+          <div class="ability-box">
+            <img
+              class="ability-picture"
+              src="images/humidifier.png"
+              alt="PCB icon"
+            />
+            <div class="overlap-ability"></div>
+            <div class="ability-description-header">Design</div>
+            <div class="ability-description-text">Product and graphic</div>
+          </div>
+          <div class="regular-separator"></div>
           <section class="fotogalerie">
             <img
               src="images/soldering.jpg"
@@ -466,6 +467,7 @@
               class="photo-photogallery"
             />
           </section>
+          <div class="regular-separator"></div>
           <h2 class="regular-header">
             Why did I decide to create this website?
           </h2>
@@ -591,7 +593,7 @@
 
               // Každý odstavec začíná pevně danou větou
               paragraph.push(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               );
 
               for (let i = 0; i < sentencesInParagraph; i++) {
@@ -625,7 +627,7 @@
       <div class="codswallop"></div>
       <div class="separator-bottom"></div>
       <div class="bottom-text">
-        © 2025 Robin Josef Šafařík, all rights reserved.
+        © 2025 - 2026 Robin Josef Šafařík, all rights reserved.
       </div>
     </main>
   </body>

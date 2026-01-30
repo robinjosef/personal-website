@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
@@ -245,7 +245,12 @@
           </h2>
           <div
             style="
-              font-family: Stack Sans Text, Roboto, Arial, Helvetica, sans-serif;
+              font-family:
+                Stack Sans Text,
+                Roboto,
+                Arial,
+                Helvetica,
+                sans-serif;
               opacity: 0.5;
               align-self: center;
             "
@@ -382,8 +387,49 @@
             ani neexistovaly :)
           </p>
 
-          <h2 class="regular-header">Zaměření</h2>
-          <p class="note-non-editable">
+          <h2 style="margin-bottom: 20px" class="regular-header">Baví mě:</h2>
+          <!-- <grid class="grid-abilities"> -->
+          <div class="ability-box">
+            <img
+              class="ability-picture"
+              src="images/soldering.jpg"
+              alt="PCB icon"
+            />
+            <div class="overlap-ability"></div>
+            <div class="ability-description-header">Robotika</div>
+            <div class="ability-description-text">Hardware i software</div>
+          </div>
+          <div class="ability-box">
+            <img
+              class="ability-picture"
+              src="images/programovani.png"
+              alt="PCB icon"
+            />
+            <div class="overlap-ability"></div>
+            <div class="ability-description-header">Programování</div>
+            <div class="ability-description-text">
+              C, C++, Python, HTML, CSS, Java
+            </div>
+          </div>
+          <div class="ability-box">
+            <img class="ability-picture" src="images/dps.png" alt="PCB icon" />
+            <div class="overlap-ability"></div>
+            <div class="ability-description-header">Návrh plošných spojů</div>
+            <div class="ability-description-text">Schéma i Display</div>
+          </div>
+          <div class="ability-box">
+            <img
+              class="ability-picture"
+              src="images/humidifier.png"
+              alt="PCB icon"
+            />
+            <div class="overlap-ability"></div>
+            <div class="ability-description-header">Design</div>
+            <div class="ability-description-text">Produktový i grafický</div>
+          </div>
+          <div class="regular-separator"></div>
+          <!-- </grid> -->
+          <!-- <p class="note-non-editable">
             Nenazýval bych to zaměřeními, spíše zájmy – přece jen jsem teprve v
             1. ročníku gymnázia.
           </p>
@@ -427,7 +473,7 @@
             style="margin-top: 0px; align-self: baseline"
           >
             • • •
-          </p>
+          </p> -->
           <section class="fotogalerie">
             <img
               src="images/soldering.jpg"
@@ -461,6 +507,7 @@
               class="photo-photogallery"
             />
           </section>
+          <div class="regular-separator"></div>
           <h2 class="regular-header">
             Proč jsem se rozhodl vytvořit tento web?
           </h2>
@@ -471,9 +518,9 @@
           </p>
 
           <p class="note-non-editable">
-            Pokud byste mě chtěli podpořit, velmi mi pomůže vyplnění dotazníku,
-            který je zatím dostupný jen v angličtině. Děkuji, každá odpověď se
-            počítá.
+            Pokud byste mě chtěli podpořit, velmi mi pomůže vyplnění jednoho z
+            dotazníků, které jsou psány zatím jen v angličtině. Děkuji, každá
+            odpověď se počítá.
           </p>
           <a
             class="button"
@@ -587,7 +634,7 @@
 
               // Každý odstavec začíná pevně danou větou
               paragraph.push(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               );
 
               for (let i = 0; i < sentencesInParagraph; i++) {
@@ -621,7 +668,7 @@
       <div class="codswallop"></div>
       <div class="separator-bottom"></div>
       <div class="bottom-text">
-        © 2025 Robin Josef Šafařík, všechna práva vyhrazena.
+        © 2025 - 2026 Robin Josef Šafařík, všechna práva vyhrazena.
       </div>
     </main>
   </body>

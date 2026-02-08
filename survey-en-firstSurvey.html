@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
@@ -109,7 +109,7 @@
           />
         </a>
         <div class="title-and-image">
-          <div class="menu-text">Surveys</div>
+          <div class="menu-text">Research</div>
           <div class="wrapper">
             <img
               class="led-on-indicating"
@@ -184,7 +184,10 @@
           if ("undefined" != typeof Tally) v();
           else if (d.querySelector('script[src="' + w + '"]') == null) {
             var s = d.createElement("script");
-            (s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s);
+            ((s.src = w),
+              (s.onload = v),
+              (s.onerror = v),
+              d.body.appendChild(s));
           }
         </script>
 

@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="contact-styles.css" />
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,14 +36,12 @@
       rel="stylesheet"
     />
 
-
     <script
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
   </head>
   <body class="body">
- 
     <input type="checkbox" id="m" class="no-checkbox" />
     <label for="m" class="menu">
       <div class="round-menu-holder">
@@ -161,10 +158,71 @@
             <span class="cursor"></span>, neváhejte mě kontaktovat:
           </p>
 
-          <form
+          <!-- <form
             action="https://formsubmit.co/robinjos.vlcr@gmail.com"
             method="POST"
           >
+            <section class="contact-grid">
+              <p class="pcb-text">Zkontaktujte mě:</p>
+              <section class="contact-grid-divider">
+                <input
+                  type="text"
+                  name="name"
+                  class="contact-input"
+                  placeholder="Jméno a příjmení"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="contact-input"
+                  placeholder="e-mail"
+                  required
+                />
+              </section>
+              <textarea
+                class="textarea-contact"
+                name="message"
+                placeholder="Zde napište Vaši zprávu."
+                required
+              ></textarea>
+              <section class="contact-grid-divider">
+                <button class="submit-button" type="submit">
+                  <p class="pcb-text">Odeslat</p>
+                  <div class="wrapper-button">
+                    <img
+                      class="button-3d-style"
+                      src="images/button-3d.png"
+                      alt="⍰"
+                    />
+                    <img
+                      class="button-3d-pressed-style"
+                      src="images/button-3d-pressed.png"
+                      alt="⍰"
+                    />
+                  </div>
+                </button>
+                <div class="hole-round-contact"></div>
+              </section>
+            </section>
+          </form> -->
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="a4da88d6-1831-43f0-a946-2b9bdd9c9a17"
+            />
+
+            <!-- Vlastní předmět e-mailu, který vám přjde do schránky -->
+            <input type="hidden" name="_subject" value="Zpráva:" />
+
+            <!-- Kam přesměrovat uživatele po odeslání (např. zpět na kontakt) -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://robinsafarik.cz/contact-cz.html"
+            />
+
             <section class="contact-grid">
               <p class="pcb-text">Zkontaktujte mě:</p>
               <section class="contact-grid-divider">
@@ -288,9 +346,6 @@
               scrolling="no"
             ></iframe>
           </section>
-
-       
-
         </section>
       </section>
       <div class="codswallop"></div>
@@ -301,4 +356,3 @@
     </main>
   </body>
 </html>
-

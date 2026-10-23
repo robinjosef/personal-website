@@ -158,7 +158,7 @@
             <span class="cursor"></span>, please feel free to contact me:
           </p>
 
-          <form
+          <!-- <form
             action="https://formsubmit.co/robinjos.vlcr@gmail.com"
             method="POST"
           >
@@ -205,6 +205,67 @@
                 <div class="hole-round-contact"></div>
               </section>
             </section>
+          </form> -->
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="a4da88d6-1831-43f0-a946-2b9bdd9c9a17"
+            />
+
+            <!-- Vlastní předmět e-mailu, který vám přjde do schránky -->
+            <input type="hidden" name="_subject" value="Zpráva:" />
+
+            <!-- Kam přesměrovat uživatele po odeslání (např. zpět na kontakt) -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://robinsafarik.cz/contact-cz.html"
+            />
+
+            <section class="contact-grid">
+              <p class="pcb-text">Zkontaktujte mě:</p>
+              <section class="contact-grid-divider">
+                <input
+                  type="text"
+                  name="name"
+                  class="contact-input"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="contact-input"
+                  placeholder="email"
+                  required
+                />
+              </section>
+              <textarea
+                class="textarea-contact"
+                name="message"
+                placeholder="Write your message here."
+                required
+              ></textarea>
+              <section class="contact-grid-divider">
+                <button class="submit-button" type="submit">
+                  <p class="pcb-text">Submit</p>
+                  <div class="wrapper-button">
+                    <img
+                      class="button-3d-style"
+                      src="images/button-3d.png"
+                      alt="⍰"
+                    />
+                    <img
+                      class="button-3d-pressed-style"
+                      src="images/button-3d-pressed.png"
+                      alt="⍰"
+                    />
+                  </div>
+                </button>
+                <div class="hole-round-contact"></div>
+              </section>
+            </section>
           </form>
           <div class="separator"></div>
           <section class="mail-phone-grid">
@@ -216,9 +277,9 @@
               />
               <a
                 target="_blank"
-                href="mailto:robinjos.vlcr@gmail.com"
+                href="mailto:kontakt@robinsafarik.cz"
                 class="thumbnail-description"
-                >robinjos.vlcr@gmail.com</a
+                >kontakt@robinsafarik.cz</a
               >
             </div>
             <div class="icon-text">
